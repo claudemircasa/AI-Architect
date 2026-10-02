@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "AI Architect",
+  "version": "0.1.0",
+  "identifier": "ltd.governor.ai-architect",
+  "build": {
+    "frontendDist": "../../frontend/dist",
+    "beforeBuildCommand": "npm --prefix ../frontend run build",
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "npm --prefix ../../frontend run dev"
+  },
+  "app": {
+    "windows": [],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost http://127.0.0.1:* http://localhost:*",
+      "devCsp": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' ws: ipc: http://ipc.localhost http://127.0.0.1:* http://localhost:*"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "app"
+    ],
+    "icon": [
+      "icons/icon.png"
+    ],
+    "category": "DeveloperTool",
+    "shortDescription": "Visual prototyping for TensorFlow architectures",
+    "longDescription": "Design neural network architectures visually, watch real data flow through them, and export standalone trainable TensorFlow projects.",
+    "resources": {
+      "engine-src": "engine-src",
+      "install-runtime.sh": "install-runtime.sh"
+    }
+  },
+  "plugins": {}
+}

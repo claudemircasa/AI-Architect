@@ -1,24 +1,85 @@
-This is free and unencumbered software released into the public domain.
+Copyright (c) 2026 Governor Ltda.
+All Rights Reserved.
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
+PROPRIETARY LICENSE — COLLABORATION PERMITTED, COMMERCIAL USE RESERVED
 
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
+This software and its associated documentation (the "Software") are the exclusive
+property of Governor Ltda. This licence grants the permissions set out below and
+reserves everything else.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
 
-For more information, please refer to <https://unlicense.org>
+1. PERMITTED USE
+
+You are granted a worldwide, royalty-free, non-exclusive licence to:
+
+  a) use the Software for personal, educational, academic and research purposes;
+
+  b) study, modify and adapt the Software, and create derivative works of it, for
+     those same purposes;
+
+  c) contribute your changes back to Governor Ltda, by pull request or otherwise;
+
+  d) share the Software and your derivative works, provided that every copy keeps
+     this licence intact, keeps the copyright notice above, and states what was
+     changed.
+
+
+2. RESERVED RIGHTS
+
+Commercial exploitation of the Software is reserved to Governor Ltda. Without express
+prior written authorisation from Governor Ltda, you may NOT:
+
+  a) use the Software, in whole or in part, in a product or service that is sold,
+     licensed, rented, or otherwise offered for a fee or other consideration;
+
+  b) use the Software to provide a commercial service, whether or not the Software
+     itself is distributed to the recipients of that service;
+
+  c) incorporate the Software, or any derivative work of it, into a commercial
+     offering;
+
+  d) sublicense, sell or transfer the Software or any right granted by this licence.
+
+Internal use by a commercial organisation, for its own research or evaluation and not
+as part of anything it offers to others, is permitted under section 1.
+
+
+3. CONTRIBUTIONS
+
+By submitting a contribution you confirm that you have the right to do so, and you
+grant Governor Ltda a perpetual, worldwide, royalty-free, irrevocable licence to use,
+reproduce, modify and distribute that contribution as part of the Software, including
+under the commercial rights reserved in section 2. You keep the copyright in your own
+contribution.
+
+
+4. TRADEMARKS
+
+This licence grants no rights in the names, logos or trademarks of Governor Ltda.
+
+
+5. TERMINATION
+
+The permissions in section 1 end automatically if you breach this licence. They are
+restored if the breach is cured and Governor Ltda is notified.
+
+
+6. DISCLAIMER OF WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+7. THIRD-PARTY COMPONENTS
+
+The Software depends on third-party software, including TensorFlow, Keras, FastAPI,
+React and Tauri, each distributed under its own licence. Nothing here alters those
+terms, and the packaged application downloads those components at first launch rather
+than redistributing them.
+
+
+For commercial authorisation, please contact Governor Ltda — https://governor.ltd

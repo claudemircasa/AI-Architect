@@ -1,0 +1,138 @@
+/**
+ * > [!AML-DOC-FILE]
+ * @file        src/index.css
+ * @description Design tokens and base styles for the editor.
+ * @module      frontend/styles
+ * @exports     (global stylesheet)
+ * @created     2026-09-30
+ * @context     Dark-first, which is the convention for this class of tool, with a
+ *              light theme defined from the same token names. Category hues double
+ *              as the palette grouping colour and the canvas node accent, so a
+ *              layer is recognisable in both places.
+ */
+
+@import "tailwindcss";
+
+@theme {
+  --color-surface-0: oklch(0.17 0.012 265);
+  --color-surface-1: oklch(0.21 0.014 265);
+  --color-surface-2: oklch(0.26 0.016 265);
+  --color-surface-3: oklch(0.32 0.018 265);
+  --color-line: oklch(0.36 0.02 265);
+  --color-ink-0: oklch(0.97 0.004 265);
+  --color-ink-1: oklch(0.79 0.014 265);
+  --color-ink-2: oklch(0.63 0.016 265);
+  --color-accent: oklch(0.72 0.16 250);
+  --color-danger: oklch(0.68 0.19 25);
+  --color-warn: oklch(0.79 0.15 80);
+  --color-good: oklch(0.74 0.15 155);
+
+  --color-cat-core: oklch(0.72 0.16 250);
+  --color-cat-convolution: oklch(0.74 0.15 175);
+  --color-cat-pooling: oklch(0.74 0.13 200);
+  --color-cat-recurrent: oklch(0.76 0.15 95);
+  --color-cat-normalization: oklch(0.72 0.13 300);
+  --color-cat-regularization: oklch(0.68 0.11 330);
+  --color-cat-attention: oklch(0.75 0.17 40);
+  --color-cat-reshaping: oklch(0.70 0.09 230);
+  --color-cat-merging: oklch(0.76 0.15 140);
+  --color-cat-activation: oklch(0.78 0.14 70);
+  --color-cat-preprocessing: oklch(0.66 0.08 260);
+  --color-cat-research: oklch(0.74 0.18 320);
+
+  /*
+   * Chart series colours: categorical slots 1 and 2, stepped per surface.
+   * Validated with the palette checker against each theme's own panel surface —
+   * lightness band, chroma floor, CVD separation and contrast all pass. The light
+   * pair's contrast warning is relieved by the direct labels every chart draws.
+   */
+  --color-series-1: #3987e5;
+  --color-series-2: #d95926;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html:not(.dark) {
+  color-scheme: light;
+  --color-surface-0: oklch(0.99 0.002 265);
+  --color-surface-1: oklch(0.96 0.004 265);
+  --color-surface-2: oklch(0.92 0.006 265);
+  --color-surface-3: oklch(0.87 0.008 265);
+  --color-line: oklch(0.82 0.01 265);
+  --color-ink-0: oklch(0.22 0.014 265);
+  --color-ink-1: oklch(0.40 0.016 265);
+  --color-ink-2: oklch(0.55 0.014 265);
+  --color-accent: oklch(0.55 0.17 250);
+  --color-series-1: #2a78d6;
+  --color-series-2: #eb6834;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--color-surface-0);
+  color: var(--color-ink-0);
+  font-family: ui-sans-serif, -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+/* Scrollbars that do not fight the dark surfaces. */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--color-surface-3);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--color-line);
+  background-clip: content-box;
+}
+
+/* React Flow theming, mapped onto the tokens above. */
+.react-flow {
+  --xy-background-color: var(--color-surface-0);
+  --xy-edge-stroke: var(--color-line);
+  --xy-edge-stroke-selected: var(--color-accent);
+  --xy-handle-background-color: var(--color-surface-3);
+  --xy-handle-border-color: var(--color-line);
+  --xy-selection-background-color: color-mix(in oklab, var(--color-accent) 12%, transparent);
+  --xy-minimap-background-color: var(--color-surface-1);
+}
+
+.react-flow__edge-path {
+  stroke-width: 1.5;
+}
+
+.react-flow__handle {
+  width: 9px;
+  height: 9px;
+  border-width: 1.5px;
+}
+
+.react-flow__handle-connecting {
+  background: var(--color-warn);
+}
+
+.react-flow__handle-valid {
+  background: var(--color-good);
+}
+
+.react-flow__attribution {
+  display: none;
+}
