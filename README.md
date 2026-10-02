@@ -212,6 +212,42 @@ the output shape its expression has to produce.
 
 ---
 
+## Contributing
+
+Contributions are welcome under the licence below.
+
+### About the docblocks
+
+Nearly every file and function here carries a structured comment that looks like this:
+
+```python
+"""
+> [!AML-DOC-UNIT]
+Whether a layer provably does nothing to its input.
+@param node the layer
+@returns True when removing it cannot change the model's output
+@sideEffects none
+@context Each case is one a model picks up by being built and edited rather than
+         by being written badly: an Identity left behind by an import, a Dropout
+         turned down to nothing, an activation set to linear.
+"""
+```
+
+This is **AML**, a documentation format proprietary to Governor Ltda, applied across
+147 files here. **You do not need to learn it, and nothing is enforced.** Write new
+code's comments however you prefer. If you would rather match the surrounding style,
+copy a header from any nearby file and change its contents — that is all anyone does.
+
+Two things worth knowing if you read the existing comments:
+
+- Bracketed codes such as `[E-042]`, `[amm: E.4]` or `[task 06]` point at Governor's
+  internal engineering notes, which are not part of this repository. They are
+  provenance, not instructions. Ignore them.
+- The `@context` lines are the ones worth reading. They say *why* something is the way
+  it is, usually because the obvious alternative was tried first and failed.
+
+---
+
 ## License
 
 Copyright (c) 2026 Governor Ltda. All rights reserved.
